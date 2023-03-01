@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "LinkedIn Connection Request Automation",
+  "version": "1.0",
+  "description": "Send automated connection requests",
+  "permissions": ["activeTab", "tabs"],
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.linkedin.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
